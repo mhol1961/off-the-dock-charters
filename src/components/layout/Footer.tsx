@@ -16,7 +16,7 @@ export default function Footer() {
             <h4 className="text-lg font-bold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li><Link href="/about" className="text-gray-300 hover:text-primary">About Us</Link></li>
-              <li><Link href="/services" className="text-gray-300 hover:text-primary">Services</Link></li>
+              <li><Link href="/faq" className="text-gray-300 hover:text-primary">FAQs</Link></li>
               <li><Link href="/gallery" className="text-gray-300 hover:text-primary">Gallery</Link></li>
               <li><Link href="/contact" className="text-gray-300 hover:text-primary">Contact</Link></li>
             </ul>
@@ -55,7 +55,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-gray-800">
           <p className="text-center text-gray-400">
-            © {new Date().getFullYear()} Off The Dock Charters. All rights reserved.
+            {new Date().getFullYear()} Off The Dock Charters. All rights reserved.
           </p>
         </div>
       </div>

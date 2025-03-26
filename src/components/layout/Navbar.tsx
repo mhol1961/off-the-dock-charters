@@ -36,10 +36,10 @@ export default function Navbar() {
             About
           </Link>
           <Link 
-            href="/services" 
-            className={`text-white hover:text-yellow-400 transition-colors ${pathname === '/services' ? 'text-yellow-400' : ''}`}
+            href="/faq" 
+            className={`text-white hover:text-yellow-400 transition-colors ${pathname === '/faq' ? 'text-yellow-400' : ''}`}
           >
-            Services
+            FAQs
           </Link>
           <Link 
             href="/packages" 

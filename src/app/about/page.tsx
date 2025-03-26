@@ -1,10 +1,15 @@
+import CaptainBio from '@/components/about/CaptainBio'
+import BoatInfo from '@/components/about/BoatInfo'
+import MarinaInfo from '@/components/about/MarinaInfo'
+import TripInfo from '@/components/about/TripInfo'
+
 export default function AboutPage() {
   return (
-    <div className="container-custom py-12">
-      <h1 className="text-4xl font-heading font-bold mb-8">About Us</h1>
-      <div className="prose prose-invert max-w-none">
-        <p>Content coming soon...</p>
-      </div>
-    </div>
+    <main>
+      <CaptainBio />
+      <BoatInfo />
+      <MarinaInfo />
+      <TripInfo />
+    </main>
   )
 }
