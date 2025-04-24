@@ -103,6 +103,36 @@ const galleryImages: GalleryImage[] = [
     height: 600
   },
   {
+    src: '/images/ManWithRedfish3.jpeg',
+    alt: 'Angler with a beautiful copper redfish',
+    width: 800,
+    height: 600
+  },
+  {
+    src: '/images/ManWithRedfish4.jpeg',
+    alt: 'Angler showing off a large redfish catch',
+    width: 800,
+    height: 600
+  },
+  {
+    src: '/images/YoungGirlRedfish.jpeg',
+    alt: 'Young girl with her redfish catch',
+    width: 800,
+    height: 600
+  },
+  {
+    src: '/images/TwoMenRedfish.jpeg',
+    alt: 'Two anglers with their redfish catches',
+    width: 800,
+    height: 600
+  },
+  {
+    src: '/images/ChandlerRedfish.jpeg',
+    alt: 'Captain Chandler with a trophy redfish',
+    width: 800,
+    height: 600
+  },
+  {
     src: '/images/Two_guys_Redfish_gallery.png',
     alt: 'Two anglers with a redfish catch',
     width: 800,
