@@ -113,6 +113,7 @@ export default function SpeciesGallery() {
                 src={species.image}
                 alt={species.name}
                 fill
+                unoptimized
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
@@ -139,6 +140,7 @@ export default function SpeciesGallery() {
                 src={selectedSpecies.image}
                 alt={selectedSpecies.name}
                 fill
+                unoptimized
                 className="object-cover transition-transform duration-700 hover:scale-110"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-1/4 z-10" />
