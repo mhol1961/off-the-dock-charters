@@ -109,20 +109,20 @@ export default function ConservationPage() {
               We're proud to support and work with these organizations dedicated to protecting Florida's marine ecosystems:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-black/50 p-6 rounded-xl border border-yellow-600/30 shadow-lg hover:shadow-xl hover:shadow-yellow-900/20 transition-all duration-300 text-center">
-                <h3 className="text-lg font-semibold text-yellow-400 mb-2">Coastal Conservation Association</h3>
-                <p className="text-gray-400 text-sm mb-4">Dedicated to conserving, promoting, and enhancing the present and future availability of coastal resources.</p>
-                <a href="https://ccaflorida.org/" target="_blank" rel="noopener noreferrer" className="text-yellow-500 hover:text-yellow-400 text-sm">Learn More →</a>
+              <div className="bg-black/50 p-6 rounded-xl border border-yellow-600/30 shadow-lg backlit-shadow hover:shadow-xl hover:shadow-yellow-900/30 hover:bg-black/70 hover:border-yellow-500/50 transition-all duration-300 text-center transform hover:-translate-y-1 group">
+                <h3 className="text-lg font-semibold text-yellow-400 mb-2 group-hover:text-yellow-300 transition-colors duration-300">Coastal Conservation Association</h3>
+                <p className="text-gray-400 text-sm mb-4 group-hover:text-gray-300 transition-colors duration-300">Dedicated to conserving, promoting, and enhancing the present and future availability of coastal resources.</p>
+                <a href="https://ccaflorida.org/" target="_blank" rel="noopener noreferrer" className="inline-block text-yellow-500 hover:text-yellow-300 text-sm group-hover:translate-x-1 transition-all duration-300">Learn More →</a>
               </div>
-              <div className="bg-black/50 p-6 rounded-xl border border-yellow-600/30 shadow-lg hover:shadow-xl hover:shadow-yellow-900/20 transition-all duration-300 text-center">
-                <h3 className="text-lg font-semibold text-yellow-400 mb-2">Bonefish & Tarpon Trust</h3>
-                <p className="text-gray-400 text-sm mb-4">Working to conserve and restore bonefish, tarpon, and permit fisheries and habitats through research and education.</p>
-                <a href="https://www.bonefishtarpontrust.org/" target="_blank" rel="noopener noreferrer" className="text-yellow-500 hover:text-yellow-400 text-sm">Learn More →</a>
+              <div className="bg-black/50 p-6 rounded-xl border border-yellow-600/30 shadow-lg backlit-shadow hover:shadow-xl hover:shadow-yellow-900/30 hover:bg-black/70 hover:border-yellow-500/50 transition-all duration-300 text-center transform hover:-translate-y-1 group">
+                <h3 className="text-lg font-semibold text-yellow-400 mb-2 group-hover:text-yellow-300 transition-colors duration-300">Bonefish & Tarpon Trust</h3>
+                <p className="text-gray-400 text-sm mb-4 group-hover:text-gray-300 transition-colors duration-300">Working to conserve and restore bonefish, tarpon, and permit fisheries and habitats through research and education.</p>
+                <a href="https://www.bonefishtarpontrust.org/" target="_blank" rel="noopener noreferrer" className="inline-block text-yellow-500 hover:text-yellow-300 text-sm group-hover:translate-x-1 transition-all duration-300">Learn More →</a>
               </div>
-              <div className="bg-black/50 p-6 rounded-xl border border-yellow-600/30 shadow-lg hover:shadow-xl hover:shadow-yellow-900/20 transition-all duration-300 text-center">
-                <h3 className="text-lg font-semibold text-yellow-400 mb-2">Captains For Clean Water</h3>
-                <p className="text-gray-400 text-sm mb-4">Fighting to restore and protect aquatic ecosystems for the use and enjoyment of all.</p>
-                <a href="https://captainsforcleanwater.org/" target="_blank" rel="noopener noreferrer" className="text-yellow-500 hover:text-yellow-400 text-sm">Learn More →</a>
+              <div className="bg-black/50 p-6 rounded-xl border border-yellow-600/30 shadow-lg backlit-shadow hover:shadow-xl hover:shadow-yellow-900/30 hover:bg-black/70 hover:border-yellow-500/50 transition-all duration-300 text-center transform hover:-translate-y-1 group">
+                <h3 className="text-lg font-semibold text-yellow-400 mb-2 group-hover:text-yellow-300 transition-colors duration-300">Captains For Clean Water</h3>
+                <p className="text-gray-400 text-sm mb-4 group-hover:text-gray-300 transition-colors duration-300">Fighting to restore and protect aquatic ecosystems for the use and enjoyment of all.</p>
+                <a href="https://captainsforcleanwater.org/" target="_blank" rel="noopener noreferrer" className="inline-block text-yellow-500 hover:text-yellow-300 text-sm group-hover:translate-x-1 transition-all duration-300">Learn More →</a>
               </div>
             </div>
           </motion.div>

@@ -50,20 +50,20 @@ export const generateLocalBusinessSchema = () => {
     image: '/images/Logo_OTD_Charters.png',
     '@id': 'https://offthedockcharters.com',
     url: 'https://offthedockcharters.com',
-    telephone: '+1-123-456-7890',
+    telephone: '+1-941-564-5504',
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'TBD',
-      addressLocality: 'Bradenton',
+      streetAddress: '4103 13th Street Ct W',
+      addressLocality: 'Palmetto',
       addressRegion: 'FL',
-      postalCode: 'TBD',
+      postalCode: '34221',
       addressCountry: 'US'
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 27.4989,
-      longitude: -82.5748
+      latitude: 27.5889498,
+      longitude: -82.5662553
     },
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',

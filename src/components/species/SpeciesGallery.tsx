@@ -101,10 +101,10 @@ export default function SpeciesGallery() {
         {fishSpecies.map((species) => (
           <motion.div
             key={species.id}
-            whileHover={{ scale: 1.05, y: -5 }}
+            whileHover={{ scale: 1.05, y: -8, boxShadow: '0 15px 30px rgba(213, 150, 51, 0.3)' }}
             transition={{ duration: 0.3 }}
-            className={`relative cursor-pointer overflow-hidden rounded-xl shadow-lg border-2 ${
-              selectedSpecies?.id === species.id ? 'border-yellow-500' : 'border-transparent'
+            className={`relative cursor-pointer overflow-hidden rounded-xl shadow-lg backlit-shadow border-2 ${
+              selectedSpecies?.id === species.id ? 'border-yellow-500' : 'border-gray-800'
             }`}
             onClick={() => handleSpeciesClick(species)}
           >
@@ -130,16 +130,21 @@ export default function SpeciesGallery() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="bg-black/70 rounded-2xl p-6 shadow-2xl shadow-yellow-900/30 border border-yellow-700/20 mb-8"
+          className="bg-black/70 rounded-2xl p-6 shadow-2xl shadow-yellow-900/30 border border-yellow-700/20 mb-8 premium-card backlit-shadow"
         >
           <div className="flex flex-col md:flex-row gap-6">
-            <div className="md:w-1/3 relative aspect-square md:aspect-auto rounded-xl overflow-hidden shadow-lg">
+            <div className="md:w-1/3 relative aspect-square md:aspect-auto rounded-xl overflow-hidden shadow-lg backlit-shadow">
+              <div className="absolute inset-0 border-2 border-yellow-600/30 rounded-xl z-10 pointer-events-none" />
               <Image
                 src={selectedSpecies.image}
                 alt={selectedSpecies.name}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-700 hover:scale-110"
               />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-1/4 z-10" />
+              <div className="absolute bottom-3 left-3 z-10 px-3 py-1 bg-black/70 rounded-lg border border-yellow-600/30 text-xs text-yellow-400 font-medium">
+                {selectedSpecies.name}
+              </div>
             </div>
             
             <div className="md:w-2/3">
@@ -191,22 +196,48 @@ export default function SpeciesGallery() {
               
               <div className="text-gray-300">
                 {activeTab === 'description' && (
-                  <p>{selectedSpecies.description}</p>
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="p-4 bg-black/40 rounded-xl border border-gray-700/50 shadow-inner backlit-shadow"
+                  >
+                    <p>{selectedSpecies.description}</p>
+                  </motion.div>
                 )}
                 
                 {activeTab === 'seasonality' && (
-                  <p>{selectedSpecies.seasonality}</p>
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="p-4 bg-black/40 rounded-xl border border-gray-700/50 shadow-inner backlit-shadow"
+                  >
+                    <p>{selectedSpecies.seasonality}</p>
+                  </motion.div>
                 )}
                 
                 {activeTab === 'techniques' && (
-                  <p>{selectedSpecies.techniques}</p>
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="p-4 bg-black/40 rounded-xl border border-gray-700/50 shadow-inner backlit-shadow"
+                  >
+                    <p>{selectedSpecies.techniques}</p>
+                  </motion.div>
                 )}
                 
                 {activeTab === 'regulations' && (
-                  <div>
-                    <p className="mb-2"><strong>Average Size:</strong> {selectedSpecies.averageSize}</p>
-                    <p><strong>Regulations:</strong> {selectedSpecies.regulations}</p>
-                  </div>
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="p-4 bg-black/40 rounded-xl border border-gray-700/50 shadow-inner backlit-shadow"
+                  >
+                    <p className="mb-2"><strong className="text-yellow-400">Average Size:</strong> {selectedSpecies.averageSize}</p>
+                    <p><strong className="text-yellow-400">Regulations:</strong> {selectedSpecies.regulations}</p>
+                  </motion.div>
                 )}
               </div>
             </div>
@@ -216,12 +247,27 @@ export default function SpeciesGallery() {
       
       {!selectedSpecies && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="text-center p-8 bg-black/50 rounded-xl border border-yellow-600/30"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="text-center p-8 bg-black/50 rounded-xl border border-yellow-600/30 premium-card backlit-shadow"
         >
-          <FaFish className="text-yellow-400 text-4xl mx-auto mb-4" />
-          <p className="text-gray-300">Select a fish species above to view detailed information</p>
+          <div className="relative">
+            <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-black/80 rounded-full flex items-center justify-center border-2 border-yellow-500 shadow-lg shadow-yellow-500/30">
+              <FaFish className="text-yellow-400 text-4xl" />
+            </div>
+          </div>
+          <p className="text-gray-300 mt-10">Select a fish species above to view detailed information about<br />seasonal patterns, fishing techniques, and regulations</p>
+          <div className="mt-4 flex justify-center gap-2">
+            {fishSpecies.map((species) => (
+              <motion.div 
+                key={species.id}
+                whileHover={{ scale: 1.2 }}
+                className="w-3 h-3 rounded-full bg-gray-700 hover:bg-yellow-500 cursor-pointer"
+                onClick={() => handleSpeciesClick(species)}
+              />
+            ))}
+          </div>
         </motion.div>
       )}
     </div>
