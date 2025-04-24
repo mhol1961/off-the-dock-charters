@@ -8,19 +8,24 @@ import ScrollToTop from '@/components/ui/ScrollToTop'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Off The Dock Charters',
-  description: 'Inshore fishing charters in Bradenton, Florida with Captain Chandler Brown',
+  metadataBase: new URL('https://offthedockcharters.com'),
+  title: {
+    default: 'Off The Dock Charters | Premium Fishing Charters in Bradenton, FL',
+    template: '%s | Off The Dock Charters'
+  },
+  description: 'Premier inshore fishing charters in Bradenton & Anna Maria Island with Captain Chandler Brown. Specializing in snook, redfish, trout, and tarpon fishing trips.',
+  keywords: 'fishing charters, Bradenton fishing guide, inshore fishing, Florida fishing charters, snook fishing, redfish, tarpon, family fishing trips',
   openGraph: {
-    title: 'Off The Dock Charters',
-    description: 'Inshore fishing charters in Bradenton, Florida with Captain Chandler Brown',
+    title: 'Off The Dock Charters | Premium Fishing Charters in Bradenton, FL',
+    description: 'Premier inshore fishing charters in Bradenton & Anna Maria Island with Captain Chandler Brown. Specializing in snook, redfish, trout, and tarpon fishing trips.',
     url: 'https://offthedockcharters.com',
     siteName: 'Off The Dock Charters',
     images: [
       {
-        url: 'https://offthedockcharters.com/images/Logo_OTD_Charters.png',
-        width: 400,
-        height: 400,
-        alt: 'Off The Dock Charters Logo',
+        url: 'https://offthedockcharters.com/images/Two_guys_Redfish_gallery.png',
+        width: 1200,
+        height: 630,
+        alt: 'Successful fishing charter with Off The Dock Charters in Bradenton, Florida',
       },
     ],
     locale: 'en_US',
@@ -29,9 +34,23 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@offthedockcharters',
-    title: 'Off The Dock Charters',
-    description: 'Inshore fishing charters in Bradenton, Florida with Captain Chandler Brown',
-    images: ['https://offthedockcharters.com/images/Logo_OTD_Charters.png'],
+    title: 'Off The Dock Charters | Premium Fishing Charters in Bradenton, FL',
+    description: 'Premier inshore fishing charters in Bradenton & Anna Maria Island with Captain Chandler Brown. Book your adventure today!',
+    images: ['https://offthedockcharters.com/images/Two_guys_Redfish_gallery.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: '/',
   },
 }
 
