@@ -28,15 +28,24 @@ export default function BookingForm() {
   }, [])
 
   const fetchBookedSlots = async () => {
-    const { data, error } = await supabase
-      .from('bookings')
-      .select('date, time_slot')
-    
-    if (data) {
-      setBookedSlots(data.map(slot => ({
-        date: slot.date,
-        time: slot.time_slot
-      })))
+    try {
+      const { data, error } = await supabase
+        .from('bookings')
+        .select('date, time_slot')
+      
+      if (data) {
+        setBookedSlots(data.map(slot => ({
+          date: slot.date,
+          time: slot.time_slot
+        })))
+      }
+      
+      if (error) {
+        console.error('Error fetching booked slots:', error)
+      }
+    } catch (err) {
+      console.error('Failed to fetch booked slots:', err)
+      // Continue with empty booked slots
     }
   }
 

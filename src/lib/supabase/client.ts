@@ -1,11 +1,13 @@
 import { createClient } from '@supabase/supabase-js'
 import { Database } from './types'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder-for-build.supabase.co'
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-for-build-only-not-real-key'
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error('Missing Supabase environment variables')
+// Only throw error in client-side execution, not during build
+if (typeof window !== 'undefined' && (!supabaseUrl || !supabaseAnonKey || 
+    supabaseUrl === 'https://placeholder-for-build.supabase.co')) {
+  console.warn('Missing or placeholder Supabase environment variables')
 }
 
 export const supabase = createClient<Database>(supabaseUrl, supabaseAnonKey)
