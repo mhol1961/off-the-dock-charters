@@ -2,6 +2,9 @@
 
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
+import WeatherWidget from '@/components/weather/WeatherWidget'
 
 const HeroSlider = dynamic(() => import('@/components/hero/HeroSlider'), {
   ssr: false,
@@ -9,9 +12,16 @@ const HeroSlider = dynamic(() => import('@/components/hero/HeroSlider'), {
 
 export default function HomeContent() {
   return (
-    <main className="min-h-screen bg-black">
+    <div>
       {/* Hero Section */}
       <HeroSlider />
+
+      {/* Weather Widget Section */}
+      <section className="py-10 px-4 md:px-8 bg-gradient-to-b from-gray-900 to-black">
+        <div className="max-w-4xl mx-auto">
+          <WeatherWidget />
+        </div>
+      </section>
 
       {/* What to Bring Section */}
       <section className="py-16 px-4 md:px-8 bg-gradient-to-b from-black to-gray-900">
@@ -20,14 +30,13 @@ export default function HomeContent() {
             What to Bring for Your Fishing Charter with{' '}
             <span className="text-yellow-400">Capt. Chandler Brown</span>
           </h2>
-          
           <p className="text-gray-300 mb-8 text-center">
             To ensure a comfortable and enjoyable inshore fishing experience, we recommend bringing a few essential items. 
             The list below will help you prepare based on the duration of your trip and the day's weather conditions.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-black/50 p-6 rounded-lg border border-yellow-600">
+            <div className="bg-black/70 p-6 rounded-2xl border border-yellow-600 shadow-2xl shadow-yellow-900/30 hover:shadow-[0_8px_32px_0_rgba(213,150,51,0.35)] hover:-translate-y-1 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#D59633]">
               <h3 className="text-xl font-semibold text-yellow-400 mb-4">Food, Snacks & Drinks</h3>
               <p className="text-gray-300">
                 A cooler with ice is available onboard for your perishables. To maximize space and maintain comfort, 
@@ -35,21 +44,21 @@ export default function HomeContent() {
               </p>
             </div>
 
-            <div className="bg-black/50 p-6 rounded-lg border border-yellow-600">
+            <div className="bg-black/70 p-6 rounded-2xl border border-yellow-600 shadow-2xl shadow-yellow-900/30 hover:shadow-[0_8px_32px_0_rgba(213,150,51,0.35)] hover:-translate-y-1 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#D59633]">
               <h3 className="text-xl font-semibold text-yellow-400 mb-4">Sunscreen</h3>
               <p className="text-gray-300">
                 Protect yourself from the Florida sun with a good, reef-safe sunscreen.
               </p>
             </div>
 
-            <div className="bg-black/50 p-6 rounded-lg border border-yellow-600">
+            <div className="bg-black/70 p-6 rounded-2xl border border-yellow-600 shadow-2xl shadow-yellow-900/30 hover:shadow-[0_8px_32px_0_rgba(213,150,51,0.35)] hover:-translate-y-1 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#D59633]">
               <h3 className="text-xl font-semibold text-yellow-400 mb-4">Hat & Sunglasses</h3>
               <p className="text-gray-300">
                 A wide-brim hat and polarized sunglasses will help reduce glare and keep you cool.
               </p>
             </div>
 
-            <div className="bg-black/50 p-6 rounded-lg border border-yellow-600">
+            <div className="bg-black/70 p-6 rounded-2xl border border-yellow-600 shadow-2xl shadow-yellow-900/30 hover:shadow-[0_8px_32px_0_rgba(213,150,51,0.35)] hover:-translate-y-1 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#D59633]">
               <h3 className="text-xl font-semibold text-yellow-400 mb-4">Proper Footwear</h3>
               <p className="text-gray-300">
                 Non-slip sandals, flip-flops, or dock shoes are recommended for safety and comfort.
@@ -57,7 +66,7 @@ export default function HomeContent() {
             </div>
           </div>
 
-          <div className="mt-8 p-6 bg-black/50 rounded-lg border border-yellow-600">
+          <div className="mt-8 p-6 bg-black/70 rounded-2xl border border-yellow-600 shadow-2xl shadow-yellow-900/30 hover:shadow-[0_8px_32px_0_rgba(213,150,51,0.35)] hover:-translate-y-1 transition-all duration-300 focus-within:ring-2 focus-within:ring-[#D59633]">
             <h3 className="text-xl font-semibold text-yellow-400 mb-4">Weather-Appropriate Clothing</h3>
             <p className="text-gray-300">
               Check the forecast and bring a light jacket or rain gear if necessary.
@@ -70,9 +79,68 @@ export default function HomeContent() {
         </div>
       </section>
 
+      {/* Featured Catches Section */}
+      <section className="py-16 px-4 md:px-8 bg-gradient-to-b from-black to-gray-900">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-[0_2px_4px_rgba(213,150,51,0.3)]">
+              Recent Featured Catches
+            </h2>
+            <p className="text-gray-300 max-w-3xl mx-auto">
+              Take a look at some of the amazing catches our clients have reeled in on recent charters.
+              You could be next!
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { image: '/images/Guy_Snook_gallery.png', species: 'Snook', location: 'Sarasota Bay', date: 'April 2025' },
+              { image: '/images/Lady_large_jack_gallery.png', species: 'Jack Crevalle', location: 'Tampa Bay', date: 'March 2025' },
+              { image: '/images/Two_guys_big_tarpon_gallery.png', species: 'Tarpon', location: 'Manatee River', date: 'February 2025' }
+            ].map((catch_, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative group"
+              >
+                <div className="relative h-80 overflow-hidden rounded-xl shadow-lg">
+                  <Image
+                    src={catch_.image}
+                    alt={`${catch_.species} caught in ${catch_.location}`}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                    <h3 className="text-xl font-bold text-yellow-400">{catch_.species}</h3>
+                    <p className="text-sm">{catch_.location} • {catch_.date}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-10">
+            <Link
+              href="/gallery"
+              className="inline-block px-6 py-3 border border-yellow-600 text-yellow-500 rounded-lg hover:bg-yellow-600/10 hover:text-yellow-400 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-900/20"
+            >
+              View Full Gallery
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action Section */}
       <section className="py-16 px-4 md:px-8 bg-gradient-to-b from-gray-900 to-black">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center rounded-2xl shadow-2xl shadow-yellow-900/30 bg-black/60 p-10 border border-yellow-700 hover:shadow-[0_8px_32px_0_rgba(213,150,51,0.35)] hover:-translate-y-1 transition-all duration-300">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready for an Amazing Fishing Experience?
           </h2>
@@ -81,12 +149,12 @@ export default function HomeContent() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-medium hover:bg-yellow-500 transition-colors text-lg"
+            className="inline-block bg-[#D59633] text-black px-8 py-4 rounded-lg font-medium hover:bg-[#c08629] hover:scale-105 hover:shadow-lg hover:shadow-yellow-900/30 transition-all duration-300 transform"
           >
             Book Your Charter
           </Link>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

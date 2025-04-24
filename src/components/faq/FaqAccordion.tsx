@@ -78,13 +78,13 @@ function FaqItem({ question, answer, isOpen, onToggle }: {
   onToggle: () => void
 }) {
   return (
-    <div className="border-b border-gray-700">
+    <div className="border border-gray-700/30 rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:shadow-yellow-900/20 transition-all duration-300 bg-black/60 last:mb-0 mb-4">
       <button
-        className="w-full py-6 flex justify-between items-center text-left focus:outline-none"
+        className="w-full py-5 px-6 flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-yellow-600/50 focus:ring-inset"
         onClick={onToggle}
       >
-        <span className="text-lg font-medium text-white">{question}</span>
-        <span className="ml-6 flex-shrink-0 text-yellow-500">
+        <h3 className="text-xl font-medium text-left text-white">{question}</h3>
+        <span className="text-yellow-400 ml-4 transition-transform duration-300 transform ${isOpen ? 'rotate-180' : 'rotate-0'}">
           {isOpen ? <FiMinus size={24} /> : <FiPlus size={24} />}
         </span>
       </button>
@@ -118,34 +118,37 @@ function FaqItem({ question, answer, isOpen, onToggle }: {
 export default function FaqAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
+  const toggleFaq = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index)
+  }
+
   return (
-    <section className="bg-gray-900 py-16 md:py-24">
-      <div className="container mx-auto px-4">
-        <motion.div
+    <section className="py-16 px-4 bg-gradient-to-b from-black to-gray-900">
+      <div className="container mx-auto max-w-4xl">
+        <motion.h1 
+          className="text-4xl font-bold text-center mb-12 text-white drop-shadow-[0_2px_4px_rgba(213,150,51,0.3)]"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Frequently Asked Questions
+        </motion.h1>
+        <motion.div 
+          className="space-y-6 p-6 rounded-2xl bg-black/40 shadow-2xl shadow-yellow-900/20 border border-yellow-700/10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Everything you need to know about your fishing charter experience
-          </p>
-        </motion.div>
-
-        <div className="max-w-3xl mx-auto">
           {faqData.map((faq, index) => (
             <FaqItem
               key={index}
               question={faq.question}
               answer={faq.answer}
               isOpen={openIndex === index}
-              onToggle={() => setOpenIndex(openIndex === index ? null : index)}
+              onToggle={() => toggleFaq(index)}
             />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

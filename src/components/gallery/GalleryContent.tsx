@@ -1,6 +1,7 @@
 'use client'
 
 import dynamic from 'next/dynamic'
+import Link from 'next/link'
 
 const GalleryGrid = dynamic(() => import('@/components/gallery/GalleryGrid'), {
   ssr: false
@@ -8,41 +9,54 @@ const GalleryGrid = dynamic(() => import('@/components/gallery/GalleryGrid'), {
 
 export default function GalleryContent() {
   return (
-    <div className="min-h-screen bg-black">
+    <main>
       {/* Hero Section */}
-      <div className="relative py-24 px-4 bg-gradient-to-b from-black to-gray-900">
-        <div className="container mx-auto max-w-6xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 text-center">
+      <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-10">
+          <div className="absolute top-10 left-10 w-32 h-32 rounded-full bg-yellow-500 blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-48 h-48 rounded-full bg-yellow-600 blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 text-center premium-heading gold-text">
             Inshore Fishing Gallery
           </h1>
-          <p className="text-xl text-gray-300 text-center max-w-2xl mx-auto mb-12">
+          <p className="text-xl text-gray-300 text-center max-w-2xl mx-auto mb-16">
             Experience the thrill of inshore fishing in Bradenton through our gallery of memorable catches. 
-            From trophy snook to monster redfish, these photos showcase the incredible fishing opportunities 
-            in our local waters.
+            Click on any image to view in full screen.
           </p>
           
           {/* Gallery Grid */}
           <GalleryGrid />
+        </div>
+      </section>
 
-          {/* SEO Text */}
-          <div className="mt-16 prose prose-invert max-w-none">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Bradenton's Premier Inshore Fishing Experience
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-gradient-to-b from-gray-900 to-black">
+        <div className="container mx-auto max-w-4xl">
+          <div className="premium-card backlit-shadow p-8 md:p-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 premium-heading">
+              Share Your Adventure
             </h2>
-            <p className="text-gray-300">
-              Our gallery showcases the incredible inshore fishing opportunities available in Bradenton, Florida. 
-              Each photo represents a memorable moment on the water with Off The Dock Charters. From the 
-              backcountry mangroves to the grass flats of Tampa Bay, we target various species including snook, 
-              redfish, trout, and the mighty silver king - tarpon.
+            <p className="text-lg text-gray-300 mb-8">
+              Had a great time fishing with us? Share your photos on social media and tag us 
+              @OffTheDockCharters or use #BradentonFishing to be featured in our gallery!
             </p>
-            <p className="text-gray-300">
-              Captain Chandler Brown's expertise in local waters ensures that whether you're a beginner or an 
-              experienced angler, you'll have the best chance at landing your dream catch. These photos are just 
-              a glimpse of what you can experience on your next fishing adventure with us.
-            </p>
+            <div className="flex justify-center">
+              <Link 
+                href="/contact" 
+                className="premium-button flex items-center gap-2"
+              >
+                Book Your Next Adventure
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   )
 }

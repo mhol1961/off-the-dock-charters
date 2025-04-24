@@ -3,27 +3,40 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
+  --primary: #D59633;
+  --primary-hover: #c08629;
+  --text-accent: #D59633;
+  --text-accent-hover: #c08629;
+  --button-text: #000;
+  --background: #000;
+  --text: #fff;
+  --card-bg: #1f2937;
+  --nav-bg: rgba(0, 0, 0, 0.9);
+  --border: #374151;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer components {
-  .btn-primary {
-    @apply bg-primary hover:bg-primary-dark text-background px-6 py-3 rounded-lg font-semibold transition-colors duration-200;
+@layer base {
+  body {
+    @apply bg-[var(--background)] text-[var(--text)] min-h-screen flex flex-col;
   }
-  
-  .container-custom {
-    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+
+  .nav-bg {
+    @apply bg-[var(--nav-bg)] backdrop-blur-sm border-b border-[var(--border)];
+  }
+
+  .card {
+    @apply bg-[var(--card-bg)] rounded-lg shadow-lg border border-[var(--border)] text-[var(--text)];
+  }
+
+  .btn-primary {
+    @apply bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-[var(--button-text)] font-semibold py-2 px-6 rounded-lg transition-colors;
+  }
+
+  .text-accent {
+    @apply text-[var(--text-accent)] hover:text-[var(--text-accent-hover)] transition-colors;
+  }
+
+  .border-theme {
+    @apply border-[var(--border)];
   }
 }

@@ -9,6 +9,45 @@ const fadeInUp = {
   animate: { opacity: 1, y: 0 }
 }
 
+function InfoCard({ icon, title, content }: { icon: React.ReactNode; title: string; content: string }) {
+  return (
+    <motion.div
+      variants={fadeInUp}
+      className="bg-gray-900 p-6 rounded-lg shadow-lg"
+    >
+      <div className="text-accent mb-4">{icon}</div>
+      <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
+      <p className="text-gray-300">{content}</p>
+    </motion.div>
+  )
+}
+
+function AmenityList({ items }: { items: string[] }) {
+  return (
+    <ul className="space-y-2">
+      {items.map((item, index) => (
+        <li key={index} className="flex items-center text-gray-300">
+          <BsFillCheckCircleFill className="text-accent mr-2" />
+          {item}
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+function NotAvailableList({ items }: { items: string[] }) {
+  return (
+    <ul className="space-y-2">
+      {items.map((item, index) => (
+        <li key={index} className="flex items-center text-gray-300">
+          <BsXCircleFill className="text-red-500 mr-2" />
+          {item}
+        </li>
+      ))}
+    </ul>
+  )
+}
+
 export default function TripInfo() {
   return (
     <section className="bg-gray-800 py-16 md:py-24">
@@ -49,115 +88,55 @@ export default function TripInfo() {
           
           <InfoCard
             icon={<FaCalendarAlt className="w-8 h-8" />}
-            title="Best Times to Fish"
-            content="Some of the best inshore fishing happens in the spring and fall, when fish are actively feeding during seasonal transitions."
+            title="Trip Duration"
+            content="Choose from 4, 6, or 8-hour trips to suit your schedule and fishing goals."
           />
           
           <InfoCard
             icon={<FaClock className="w-8 h-8" />}
-            title="Trip Duration"
-            content="Full-day (8-hour) trips are only available in the morning."
+            title="Start Times"
+            content="We offer flexible start times to target the best fishing conditions. Early morning and late afternoon trips are available."
           />
         </div>
 
-        {/* Amenities Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16"
-        >
-          <h3 className="text-3xl font-bold text-white mb-8">What's Included</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-12 mt-16">
+          <motion.div
+            variants={fadeInUp}
+            className="bg-gray-900 p-8 rounded-lg shadow-lg"
+          >
+            <h3 className="text-2xl font-semibold text-white mb-6">What's Included</h3>
             <AmenityList
               items={[
-                "Inshore, Nearshore, Flats fishing",
-                "All skill levels welcome",
-                "All rods, reels, and tackle included",
-                "Fish cleaning service",
-                "BYOB (no glass containers)",
-                "Bluetooth music system",
-                "Live bait included",
-                "Weather protection",
-                "Kid-friendly experience",
-                "Flexible cancellation"
+                'All fishing licenses',
+                'Quality rods and reels',
+                'Live bait and tackle',
+                'Ice for your catch',
+                'Bottled water',
+                'Professional instruction',
+                'Fish cleaning and packaging',
               ]}
             />
-          </div>
-        </motion.div>
+          </motion.div>
 
-        {/* Not Available Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16"
-        >
-          <h3 className="text-3xl font-bold text-white mb-8">Not Available</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <NotAvailableList
+          <motion.div
+            variants={fadeInUp}
+            className="bg-gray-900 p-8 rounded-lg shadow-lg"
+          >
+            <h3 className="text-2xl font-semibold text-white mb-6">What to Bring</h3>
+            <AmenityList
               items={[
-                "No onboard bathroom facilities",
-                "Not suitable for those with disabilities"
+                'Sunscreen',
+                'Sunglasses',
+                'Hat or visor',
+                'Weather-appropriate clothing',
+                'Non-marking shoes',
+                'Camera or phone for photos',
+                'Food and drinks',
               ]}
             />
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
-  )
-}
-
-function InfoCard({ icon, title, content }: { icon: React.ReactNode; title: string; content: string }) {
-  return (
-    <motion.div
-      variants={fadeInUp}
-      initial="initial"
-      animate="animate"
-      transition={{ duration: 0.6 }}
-      className="bg-gray-900 p-6 rounded-lg"
-    >
-      <div className="text-yellow-500 mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
-      <p className="text-gray-300">{content}</p>
-    </motion.div>
-  )
-}
-
-function AmenityList({ items }: { items: string[] }) {
-  return (
-    <ul className="space-y-3">
-      {items.map((item, index) => (
-        <motion.li
-          key={index}
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: index * 0.1 }}
-          className="flex items-center space-x-3 text-gray-300"
-        >
-          <BsFillCheckCircleFill className="text-green-500 flex-shrink-0" />
-          <span>{item}</span>
-        </motion.li>
-      ))}
-    </ul>
-  )
-}
-
-function NotAvailableList({ items }: { items: string[] }) {
-  return (
-    <ul className="space-y-3">
-      {items.map((item, index) => (
-        <motion.li
-          key={index}
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: index * 0.1 }}
-          className="flex items-center space-x-3 text-gray-300"
-        >
-          <BsXCircleFill className="text-red-500 flex-shrink-0" />
-          <span>{item}</span>
-        </motion.li>
-      ))}
-    </ul>
   )
 }

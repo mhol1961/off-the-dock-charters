@@ -76,66 +76,85 @@ const testimonials: Testimonial[] = [
 
 export default function TestimonialGrid() {
   return (
-    <section className="bg-gray-900 py-16 md:py-24">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-4xl font-bold text-white mb-6">
-            What Our Customers Say
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Read about the experiences of our valued customers and their memorable fishing adventures
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
+    <div className="container mx-auto px-4 py-16 bg-gradient-to-b from-gray-900 to-black">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-center mb-12"
+      >
+        <h2 className="text-3xl font-bold mb-4 text-white premium-heading">
+          More Success Stories
+        </h2>
+        <div className="w-24 h-1 bg-yellow-600 mx-auto mb-8"></div>
+      </motion.div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {testimonials.map((testimonial, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="relative"
+          >
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-gray-800 rounded-lg overflow-hidden shadow-lg"
+              whileHover={{ scale: 1.03, y: -5, boxShadow: '0 10px 40px rgba(213, 150, 51, 0.2)' }}
+              className="premium-card h-full flex flex-col backlit-shadow"
             >
-              <div className="relative h-80">
-                <Image
-                  src={testimonial.image}
-                  alt={`Fishing trip with ${testimonial.name}`}
-                  fill
-                  className="object-contain"
-                />
+              {/* Decorative elements */}
+              <div className="absolute -top-3 -right-3 w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center z-10 shadow-lg">
+                <FaQuoteLeft className="text-black text-xl" />
               </div>
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <h3 className="text-xl font-semibold text-white">{testimonial.name}</h3>
-                      <span className="flex items-center text-green-400 text-sm">
-                        <FaCheckCircle className="mr-1" />
-                        Verified
-                      </span>
-                    </div>
-                    <p className="text-gray-400 text-sm">{testimonial.date}</p>
+              
+              <div className="absolute bottom-0 right-0 w-24 h-24 opacity-5">
+                <svg viewBox="0 0 100 100" className="w-full h-full fill-current text-yellow-500">
+                  <path d="M95.8,0v100H0V95.8C53,95.8,95.8,53,95.8,0z"></path>
+                </svg>
+              </div>
+              
+              {/* Content */}
+              <div className="flex items-center gap-4 mb-6">
+                <div className="relative w-20 h-20 flex-shrink-0">
+                  <Image
+                    src={testimonial.image}
+                    alt={`Testimonial from ${testimonial.name}`}
+                    width={100}
+                    height={100}
+                    className="rounded-full object-cover border-2 border-yellow-600 shadow-lg"
+                  />
+                  <div className="absolute -bottom-1 -right-1 w-8 h-8 bg-black rounded-full flex items-center justify-center border-2 border-yellow-500">
+                    <FaCheckCircle className="text-yellow-500 text-xs" />
                   </div>
-                  <div className="flex text-yellow-400">
+                </div>
+                
+                <div>
+                  <h3 className="font-semibold text-xl text-white">{testimonial.name}</h3>
+                  <p className="text-sm text-gray-400">{testimonial.date}</p>
+                  <div className="flex space-x-1 text-yellow-400 mt-1">
                     {[...Array(5)].map((_, i) => (
                       <FaStar key={i} />
                     ))}
                   </div>
                 </div>
-                <div className="relative">
-                  <FaQuoteLeft className="text-gray-700 text-3xl absolute -left-2 -top-2" />
-                  <p className="text-gray-300 pl-6 pt-2">{testimonial.review}</p>
+              </div>
+              
+              <div className="relative">
+                <p className="text-gray-300 flex-grow italic">"{testimonial.review}"</p>
+              </div>
+              
+              <div className="flex justify-between items-center mt-6 pt-4 border-t border-yellow-900/20">
+                <span className="text-xs text-yellow-500 font-medium">Verified Charter</span>
+                <div className="flex space-x-1">
+                  <span className="w-2 h-2 rounded-full bg-yellow-500"></span>
+                  <span className="w-2 h-2 rounded-full bg-yellow-500 opacity-60"></span>
+                  <span className="w-2 h-2 rounded-full bg-yellow-500 opacity-30"></span>
                 </div>
               </div>
             </motion.div>
-          ))}
-        </div>
+          </motion.div>
+        ))}
       </div>
-    </section>
+    </div>
   )
 }

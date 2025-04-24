@@ -11,14 +11,15 @@ export default function CaptainBio() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
+            whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
             transition={{ duration: 0.6 }}
-            className="relative h-[300px] md:h-[400px]"
+            className="relative h-[500px] md:h-[600px] rounded-2xl overflow-hidden shadow-2xl shadow-yellow-900/30 border border-yellow-700/30"
           >
             <Image
               src="/images/OTD_Meet_the_Captain.png"
               alt="Captain Chandler Brown"
               fill
-              className="object-cover rounded-lg"
+              className="object-contain rounded-lg"
               priority
             />
           </motion.div>
@@ -27,7 +28,7 @@ export default function CaptainBio() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-6"
+            className="space-y-6 p-8 rounded-2xl bg-black/60 shadow-2xl shadow-yellow-900/20 border border-yellow-700/20 hover:shadow-[0_8px_32px_0_rgba(213,150,51,0.25)] transition-all duration-300"
           >
             <h1 className="text-4xl md:text-5xl font-bold text-white">
               Meet Captain Chandler Brown

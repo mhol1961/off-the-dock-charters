@@ -60,7 +60,9 @@ export default function HeroSlider() {
           </h1>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">
             Premier Inshore Fishing in{' '}
-            <span className="text-yellow-400">Bradenton, Florida</span>
+            <span className="text-white">
+              Bradenton, Florida
+            </span>
           </h2>
           <p className="text-xl md:text-2xl mb-8 text-white drop-shadow-lg max-w-2xl mx-auto">
             Experience world-class fishing with Captain Chandler Brown. Target
@@ -69,7 +71,7 @@ export default function HeroSlider() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-medium hover:bg-yellow-500 transition-colors text-lg"
+            className="inline-block bg-[#D59633] text-black px-8 py-4 rounded-lg font-medium hover:bg-[#D59633] transition-colors text-lg"
           >
             Book Your Charter Now
           </Link>
@@ -82,7 +84,7 @@ export default function HeroSlider() {
           <button
             key={index}
             className={`w-3 h-3 rounded-full transition-colors ${
-              index === currentImage ? 'bg-yellow-400' : 'bg-white/50'
+              index === currentImage ? 'bg-[#D59633]' : 'bg-white/50'
             }`}
             onClick={() => setCurrentImage(index)}
           />

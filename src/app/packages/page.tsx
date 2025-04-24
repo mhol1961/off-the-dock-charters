@@ -53,7 +53,7 @@ export default function PackagesPage() {
         >
           <table className="w-full border-collapse">
             <thead>
-              <tr className="bg-primary text-background">
+              <tr className="bg-[#D59633] text-background">
                 <th className="px-3 py-3 text-left text-sm">Size</th>
                 <th className="px-3 py-3 text-center text-sm">4 Hrs</th>
                 <th className="px-3 py-3 text-center text-sm">6 Hrs</th>
@@ -90,22 +90,22 @@ export default function PackagesPage() {
         className="mt-8 space-y-6 max-w-6xl mx-auto"
       >
         <div className="bg-background-light p-6 rounded-lg">
-          <h2 className="text-2xl font-heading font-bold mb-4 text-primary">Booking Information</h2>
+          <h2 className="text-2xl font-heading font-bold mb-4 text-[#D59633]">Booking Information</h2>
           <ul className="space-y-4 text-gray-300">
             <li className="flex items-start">
-              <svg className="w-6 h-6 text-primary mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-[#D59633] mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span>$50 deposit required to secure your booking</span>
             </li>
             <li className="flex items-start">
-              <svg className="w-6 h-6 text-primary mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-[#D59633] mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span>Remaining balance due on the day of the trip</span>
             </li>
             <li className="flex items-start">
-              <svg className="w-6 h-6 text-primary mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-[#D59633] mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span>All equipment and licenses included</span>
@@ -116,9 +116,10 @@ export default function PackagesPage() {
         <div className="text-center">
           <Link
             href="/contact"
-            className="btn-primary inline-block"
+            className="btn-primary inline-block transition-transform transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#D59633]"
+            aria-label="Contact us to book your charter"
           >
-            Book Your Charter Now
+            Book Your Charter (Call or Email Only)
           </Link>
         </div>
       </motion.div>
