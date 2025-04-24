@@ -77,7 +77,7 @@ const fishSpecies: FishSpecies[] = [
     id: 'jack',
     name: 'Jack Crevalle',
     scientificName: 'Caranx hippos',
-    image: '/images/Lady_large_jack_gallery.png',
+    image: '/images/LAdy_large_jack_gallery.png',
     description: 'Jack crevalle are powerful, aggressive predators known for their stamina and fighting ability. They have a deep body with a yellow-tinted tail and a black spot on their gill cover.',
     seasonality: 'Available year-round, often found in schools pursuing baitfish.',
     techniques: 'Fast-moving lures like spoons and topwater plugs. Live bait such as pinfish and threadfin herring are also effective.',
