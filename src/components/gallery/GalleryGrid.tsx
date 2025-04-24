@@ -91,6 +91,18 @@ const galleryImages: GalleryImage[] = [
     height: 600
   },
   {
+    src: '/images/ManWithRedfish1.jpeg',
+    alt: 'Angler with a beautiful redfish catch',
+    width: 800,
+    height: 600
+  },
+  {
+    src: '/images/ManWithRedfish2.jpeg',
+    alt: 'Angler displaying a trophy redfish',
+    width: 800,
+    height: 600
+  },
+  {
     src: '/images/Two_guys_Redfish_gallery.png',
     alt: 'Two anglers with a redfish catch',
     width: 800,
