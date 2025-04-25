@@ -100,7 +100,7 @@ export default function HomeContent() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               { image: '/images/Guy_Snook_gallery.png', species: 'Snook', location: 'Sarasota Bay', date: 'April 2025' },
-              { image: '/images/Lady_large_jack_gallery.png', species: 'Jack Crevalle', location: 'Tampa Bay', date: 'March 2025' },
+              { image: '/images/LAdy_large_jack_gallery.png', species: 'Jack Crevalle', location: 'Tampa Bay', date: 'March 2025' },
               { image: '/images/Two_guys_big_tarpon_gallery.png', species: 'Tarpon', location: 'Manatee River', date: 'February 2025' }
             ].map((catch_, index) => (
               <motion.div
