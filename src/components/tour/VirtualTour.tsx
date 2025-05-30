@@ -26,7 +26,7 @@ const tourPoints: TourPoint[] = [
     id: 'boat-front',
     title: 'Boat Front Deck',
     description: 'The spacious front casting deck provides ample room for anglers to cast and fight fish. High-quality non-slip surface ensures safety even when wet.',
-    image: '/images/OTD_Meet_the_Captain.png', // This would be a 360° image in production
+    image: '/images/captain-chandler-brown.jpg', // This would be a 360° image in production
     hotspots: [
       { x: 75, y: 60, targetId: 'boat-console', label: 'View Console' },
       { x: 25, y: 70, targetId: 'boat-storage', label: 'View Storage' }

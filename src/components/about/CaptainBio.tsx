@@ -16,7 +16,7 @@ export default function CaptainBio() {
             className="relative h-[500px] md:h-[600px] rounded-2xl overflow-hidden shadow-2xl shadow-yellow-900/30 border border-yellow-700/30"
           >
             <Image
-              src="/images/OTD_Meet_the_Captain.png"
+              src="/images/captain-chandler-brown.jpg"
               alt="Captain Chandler Brown"
               fill
               className="object-contain rounded-lg"
@@ -33,13 +33,13 @@ export default function CaptainBio() {
             <h1 className="text-4xl md:text-5xl font-bold text-white">
               Meet Captain Chandler Brown
             </h1>
-            <div className="prose prose-lg prose-invert">
-              <p className="text-gray-300">
+            <div className="prose prose-lg prose-invert space-y-6">
+              <p className="text-gray-300 mb-6">
                 Born and raised in Bradenton, Captain Chandler Brown has spent his life mastering the 
                 waters of Tampa Bay and Sarasota Bay. His deep-rooted connection to these waters began 
                 in his childhood, where he developed an intimate understanding of the local marine ecosystem.
               </p>
-              <p className="text-gray-300">
+              <p className="text-gray-300 mb-6">
                 With years of experience navigating these waters, Captain Chandler possesses an uncanny 
                 ability to track seasonal fish movements and predict where different species are biting. 
                 His expertise isn't just about finding fish – it's about understanding their habits, 

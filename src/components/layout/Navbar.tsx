@@ -35,6 +35,7 @@ const navLinks: NavLink[] = [
       { href: '/testimonials', label: 'Testimonials' },
     ] 
   },
+  { href: '/blog', label: 'Blog' },
   { href: '/gift', label: 'Gift Certificates' },
   { href: '/faq', label: 'FAQs' },
   { href: '/contact', label: 'Contact' },
@@ -86,7 +87,7 @@ export default function Navbar() {
           <button
             onClick={() => toggleDropdown(link.label)}
             className={`flex items-center text-white hover:text-[#D59633] transition-colors px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#D59633] hover:bg-white/10 ${isChildActive(link.children) ? 'text-[#D59633] font-medium' : ''}`}
-            aria-expanded={openDropdown === link.label}
+            aria-expanded={openDropdown === link.label ? 'true' : 'false'}
           >
             {link.label}
             {openDropdown === link.label ? (

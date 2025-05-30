@@ -33,7 +33,7 @@ export default function TipsPage() {
               className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl shadow-yellow-900/30 border border-yellow-700/30"
             >
               <Image
-                src="/images/OTD_Meet_the_Captain.png"
+                src="/images/OTD_Meet_the_Captain.png.jpg"
                 alt="Captain Chandler Brown fishing"
                 fill
                 className="object-cover"

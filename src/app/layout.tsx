@@ -4,6 +4,7 @@ import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import ScrollToTop from '@/components/ui/ScrollToTop'
+import { generateLocalBusinessSchema, generateServiceSchema, generateOrganizationSchema } from '@/lib/utils/localSchema'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -59,8 +60,32 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const localBusinessSchema = generateLocalBusinessSchema()
+  const serviceSchema = generateServiceSchema()
+  const organizationSchema = generateOrganizationSchema()
+
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(serviceSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+      </head>
       <body className={`${inter.className} min-h-screen flex flex-col bg-gradient-to-b from-gray-950 via-black to-gray-950 relative`}>
         {/* Subtle animated gradient overlay */}
         <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_center,rgba(50,50,50,0.05),transparent_70%)] pointer-events-none z-0"></div>

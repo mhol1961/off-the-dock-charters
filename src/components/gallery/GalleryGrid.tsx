@@ -91,7 +91,7 @@ const galleryImages: GalleryImage[] = [
     height: 600
   },
   {
-    src: '/images/ManWithRedfish1.jpeg',
+    src: '/images/man-with-redfish-may2025.jpeg',
     alt: 'Angler with a beautiful redfish catch',
     width: 800,
     height: 600
@@ -103,7 +103,7 @@ const galleryImages: GalleryImage[] = [
     height: 600
   },
   {
-    src: '/images/ManWithRedfish3.jpeg',
+    src: '/images/two-reeling-nice-catch.png',
     alt: 'Angler with a beautiful copper redfish',
     width: 800,
     height: 600
