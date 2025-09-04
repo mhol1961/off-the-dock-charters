@@ -15,7 +15,7 @@ const boatSpecs: BoatSpec[] = [
   { label: 'Boat Length', value: '24\'' },
   { label: 'Boat Restroom', value: 'No' },
   { label: 'Engine Manufacturer', value: 'Yamaha' },
-  { label: 'Total Horsepower', value: '300' },
+  { label: 'Total Horsepower', value: '250' },
   { label: 'Number of Engines', value: '1' }
 ]
 

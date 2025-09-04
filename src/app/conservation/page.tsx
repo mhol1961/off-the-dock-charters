@@ -33,7 +33,7 @@ export default function ConservationPage() {
               className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl shadow-yellow-900/30 border border-yellow-700/30"
             >
               <Image
-                src="/images/Two_guys_Redfish_gallery.png"
+                src="/images/TwoMenRedfish.jpeg"
                 alt="Catch and release fishing"
                 fill
                 className="object-cover"

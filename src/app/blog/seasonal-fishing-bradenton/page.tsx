@@ -151,7 +151,7 @@ export default function SeasonalFishingArticle() {
             <div className="my-8">
               <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/Guy_Snook_gallery.png"
+                  src="/images/ManWithRedfish2.jpeg"
                   alt="Spring snook fishing success in Bradenton with experienced fishing guide"
                   fill
                   className="object-cover"
@@ -189,7 +189,7 @@ export default function SeasonalFishingArticle() {
             <div className="my-8">
               <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/Family_catch_trout_gallery.png"
+                  src="/images/YoungGirlRedfish.jpeg"
                   alt="Successful summer family fishing charter in Bradenton showing variety of species caught"
                   fill
                   className="object-cover"
@@ -283,7 +283,7 @@ export default function SeasonalFishingArticle() {
             <div className="my-8">
               <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/Two_guys_Redfish_gallery.png"
+                  src="/images/TwoMenRedfish.jpeg"
                   alt="Successful Bradenton fishing charter clients showing diverse catch from adaptive fishing strategy"
                   fill
                   className="object-cover"

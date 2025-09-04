@@ -7,8 +7,8 @@ export const generateLocalBusinessSchema = () => {
     "alternateName": "OTD Charters",
     "description": "Premier inshore fishing charters in Bradenton, Anna Maria Island, and Tampa Bay. Specializing in guided fishing trips for snook, redfish, trout, and tarpon with experienced Captain Chandler Brown.",
     "url": "https://offthedockcharters.com",
-    "telephone": "+1-941-567-8901",
-    "email": "info@offthedockcharters.com",
+    "telephone": "+1-941-448-5656",
+    "email": "reelfly11@gmail.com",
     "image": [
       "https://offthedockcharters.com/images/Logo_OTD_Charters.png",
       "https://offthedockcharters.com/images/captain-chandler-brown.jpg",
@@ -17,16 +17,16 @@ export const generateLocalBusinessSchema = () => {
     "logo": "https://offthedockcharters.com/images/Logo_OTD_Charters.png",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Bradenton Marina",
+      "streetAddress": "Multiple Boat Ramp Locations",
       "addressLocality": "Bradenton",
       "addressRegion": "FL",
-      "postalCode": "34205",
+      "postalCode": "34209",
       "addressCountry": "US"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 27.4989,
-      "longitude": -82.5748
+      "latitude": 27.5172,
+      "longitude": -82.6229
     },
     "areaServed": [
       {
@@ -171,8 +171,8 @@ export const generateOrganizationSchema = () => {
     "logo": "https://offthedockcharters.com/images/Logo_OTD_Charters.png",
     "image": "https://offthedockcharters.com/images/Logo_OTD_Charters.png",
     "description": "Premier fishing charter service in Bradenton, Florida, offering guided inshore fishing trips with Captain Chandler Brown.",
-    "telephone": "+1-941-567-8901",
-    "email": "info@offthedockcharters.com",
+    "telephone": "+1-941-448-5656",
+    "email": "reelfly11@gmail.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Bradenton Marina",

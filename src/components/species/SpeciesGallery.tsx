@@ -22,40 +22,40 @@ const fishSpecies: FishSpecies[] = [
     id: 'snook',
     name: 'Snook',
     scientificName: 'Centropomus undecimalis',
-    image: '/images/Guy_Snook_gallery.png',
-    description: 'Snook are one of Florida\'s most sought-after inshore game fish, known for their explosive strikes and acrobatic fights. They have a distinctive lateral line and protruding lower jaw.',
-    seasonality: 'Best fishing is spring through fall, with peak activity during summer spawning season. Winter fishing can be productive in warmer, deeper waters.',
-    techniques: 'Live bait such as pilchards, pinfish, and shrimp work well. Artificial lures like soft plastics, jerkbaits, and topwater plugs are also effective when worked around mangroves, docks, and other structures.',
-    averageSize: '5-15 pounds, with trophy specimens exceeding 30 pounds.',
-    regulations: 'Seasonal closures apply. Slot limit typically 28-33 inches. Check current regulations before your trip.'
+    image: '/images/snook_species.jpg',
+    description: 'Snook are golden yellow fish with a distinctive black lateral line running from behind the gills to the tail. They have a sloping forehead and protruding lower jaw, making them easily identifiable.',
+    seasonality: 'Best fishing is during warmer months from April through October. They move to deeper water during cooler months.',
+    techniques: 'Live bait like pilchards, pinfish, and shrimp work well. Artificial lures such as jigs, plugs, and soft plastics are effective around structure.',
+    averageSize: '5-15 pounds, with trophy fish reaching 20+ pounds.',
+    regulations: 'Slot limit 28-33 inches. Closed season December-January and June-August. One fish per person per day.'
   },
   {
     id: 'redfish',
     name: 'Redfish (Red Drum)',
     scientificName: 'Sciaenops ocellatus',
-    image: '/images/Two_guys_Redfish_gallery.png',
-    description: 'Redfish are identified by their copper-bronze coloration and characteristic black spot on the tail. They\'re known for their strong, steady fights and are a favorite among anglers.',
+    image: '/images/redfish_species.jpg',
+    description: 'Redfish are identified by their copper-bronze coloration and characteristic black spot near the tail. They\'re known for their strong, steady fights and are a favorite among anglers.',
     seasonality: 'Available year-round, with fall being prime time when they school up in larger numbers.',
     techniques: 'Sight fishing in shallow water is popular. Live bait like pinfish, mullet, and shrimp are effective. Gold spoons, soft plastics, and topwater lures also produce well.',
     averageSize: '3-12 pounds inshore, with bull reds exceeding 30 pounds.',
     regulations: 'Slot limit typically 18-27 inches. Daily bag limits apply.'
   },
   {
-    id: 'trout',
+    id: 'spotted-seatrout',
     name: 'Spotted Seatrout',
     scientificName: 'Cynoscion nebulosus',
-    image: '/images/Young_Girl_TRout_gallery.png',
-    description: 'Spotted seatrout are distinguished by their silvery color with black spots on their back and tail. They have prominent canine teeth and are a staple of inshore fishing.',
-    seasonality: 'Available year-round, with spring and fall offering the best fishing opportunities.',
-    techniques: 'Live shrimp under a popping cork is a classic approach. Soft plastic jigs, topwater plugs at dawn/dusk, and suspending lures are all effective.',
-    averageSize: '1-3 pounds, with gator trout exceeding 5 pounds.',
-    regulations: 'Slot limit typically 15-19 inches. Seasonal closures may apply.'
+    image: '/images/spotted_seatrout_species.jpg',
+    description: 'Spotted seatrout are silver-bodied fish with distinctive black spots scattered across their sides and fins. They have two prominent canine teeth and are excellent table fare.',
+    seasonality: 'Year-round species with best action in spring and fall. Summer fishing is good in deeper grass flats.',
+    techniques: 'Live shrimp under popping cork is classic. Soft plastic jigs, topwater plugs, and suspend baits work well over grass flats.',
+    averageSize: '1-3 pounds, with trophy fish over 5 pounds.',
+    regulations: 'Slot limit 15-20 inches. One fish over 20 inches allowed. Daily bag limit varies by season.'
   },
   {
     id: 'tarpon',
     name: 'Tarpon',
     scientificName: 'Megalops atlanticus',
-    image: '/images/Two_guys_big_tarpon_gallery.png',
+    image: '/images/tarpon_species.jpg',
     description: 'Known as the "Silver King," tarpon are prized for their spectacular aerial displays and challenging fights. These prehistoric fish have large, silver scales and can grow to massive sizes.',
     seasonality: 'Prime season is late spring through summer when they migrate along the coast.',
     techniques: 'Live bait such as crabs, pinfish, and mullet. Fly fishing is popular, as are artificial lures like swimbaits and DOA Baitbusters.',
@@ -63,26 +63,48 @@ const fishSpecies: FishSpecies[] = [
     regulations: 'Tarpon over 40 inches must remain in the water. Tarpon tag required for possession. Primarily a catch-and-release fishery.'
   },
   {
-    id: 'snapper',
+    id: 'mangrove-snapper',
     name: 'Mangrove Snapper',
     scientificName: 'Lutjanus griseus',
-    image: '/images/Man_LArge_mangrove_snapper_gallery.png',
-    description: 'Mangrove snapper are known for their reddish-brown color, canine teeth, and wary nature. They\'re excellent table fare and provide a good challenge for anglers.',
-    seasonality: 'Available year-round, with summer offering the best fishing as they gather to spawn.',
-    techniques: 'Light tackle with live shrimp, small pinfish, or pilchards. Fluorocarbon leaders are essential due to their sharp eyesight.',
-    averageSize: '1-3 pounds inshore, with larger specimens found near offshore structures.',
-    regulations: 'Minimum size typically 10 inches. Bag limits apply.'
+    image: '/images/mangrove_snapper_species.jpg',
+    description: 'Mangrove snapper are excellent eating fish with reddish coloration and yellow fins. They\'re found around structure and are known for their wariness and excellent eyesight.',
+    seasonality: 'Available year-round, with best fishing during warmer months when they move into shallow water.',
+    techniques: 'Live or dead shrimp, small pinfish, and cut bait. Light tackle and stealth are important as they\'re easily spooked.',
+    averageSize: '1-3 pounds, with larger fish around deeper structure.',
+    regulations: 'Minimum size 10 inches. Daily bag limit 5 per person. Check current regulations for seasons.'
   },
   {
-    id: 'jack',
+    id: 'jack-crevalle',
     name: 'Jack Crevalle',
     scientificName: 'Caranx hippos',
-    image: '/images/LAdy_large_jack_gallery.png',
-    description: 'Jack crevalle are powerful, aggressive predators known for their stamina and fighting ability. They have a deep body with a yellow-tinted tail and a black spot on their gill cover.',
-    seasonality: 'Available year-round, often found in schools pursuing baitfish.',
-    techniques: 'Fast-moving lures like spoons and topwater plugs. Live bait such as pinfish and threadfin herring are also effective.',
-    averageSize: '3-10 pounds inshore, with specimens exceeding 20 pounds.',
-    regulations: 'No bag or size limits, but primarily a catch-and-release species due to their strong flavor.'
+    image: '/images/jack_crevalle_species.jpg',
+    description: 'Jack crevalle are powerful, deep-bodied fish with incredible fighting ability. They\'re silver with a yellowish tint and known for their aggressive nature and strong runs.',
+    seasonality: 'Year-round species with peak activity during warmer months. Often found in large schools.',
+    techniques: 'Topwater plugs, jigs, and live bait work well. They\'re aggressive feeders and will hit a variety of lures and baits.',
+    averageSize: '3-8 pounds, with larger specimens reaching 15+ pounds.',
+    regulations: 'No minimum size or bag limit. Primarily caught as sport fish.'
+  },
+  {
+    id: 'sheepshead',
+    name: 'Sheepshead',
+    scientificName: 'Archosargus probatocephalus',
+    image: '/images/sheepshead_species.jpg',
+    description: 'Sheepshead are easily recognized by their distinctive black vertical stripes on a silver body. They have human-like teeth adapted for crushing shellfish and are excellent table fare.',
+    seasonality: 'Best fishing is during cooler months from November through April when they move inshore to spawn.',
+    techniques: 'Fiddler crabs, shrimp, and oysters are top baits. Fish around structure like docks, bridges, and oyster bars with light tackle.',
+    averageSize: '2-5 pounds, with trophy fish reaching 8+ pounds.',
+    regulations: 'Minimum size 12 inches. Daily bag limit 8 per person. Check for seasonal closures.'
+  },
+  {
+    id: 'flounder',
+    name: 'Southern Flounder',
+    scientificName: 'Paralichthys lethostigma',
+    image: '/images/flounder_species.jpg',
+    description: 'Southern flounder are flatfish that lie on the bottom with both eyes on one side of their head. They\'re masters of camouflage and excellent table fare.',
+    seasonality: 'Fall is prime time when they move toward passes and inlets. Spring fishing can also be productive.',
+    techniques: 'Live shrimp, mud minnows, and small jigs bounced along the bottom. Drift fishing over sandy areas is effective.',
+    averageSize: '1-3 pounds, with trophy fish reaching 5+ pounds.',
+    regulations: 'Minimum size 12 inches. Daily bag limit 5 per person. Check for seasonal closures during spawning.'
   }
 ]
 
@@ -108,13 +130,13 @@ export default function SpeciesGallery() {
             }`}
             onClick={() => handleSpeciesClick(species)}
           >
-            <div className="aspect-square relative">
+            <div className="aspect-[4/3] relative">
               <Image
                 src={species.image}
                 alt={species.name}
                 fill
                 unoptimized
-                className="object-cover"
+                className="object-contain bg-gray-900 rounded-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-2">
                 <h3 className="text-white font-bold text-center w-full text-sm md:text-base">

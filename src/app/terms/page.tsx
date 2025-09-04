@@ -90,12 +90,6 @@ export default function TermsOfServicePage() {
               </p>
             </div>
             
-            <div>
-              <h2 className="text-2xl font-bold text-white mb-4">Gift Certificates</h2>
-              <p className="text-gray-300">
-                Gift certificates are non-refundable but are transferable. They must be used within one year of the purchase date unless otherwise specified.
-              </p>
-            </div>
             
             <div>
               <h2 className="text-2xl font-bold text-white mb-4">Changes to Terms</h2>
@@ -112,8 +106,8 @@ export default function TermsOfServicePage() {
               <div className="mt-4 text-gray-300">
                 <p>Off The Dock Charters</p>
                 <p>Bradenton, Florida</p>
-                <p>Email: info@offthedockcharters.com</p>
-                <p>Phone: (941) 564-5504</p>
+                <p>Email: reelfly11@gmail.com</p>
+                <p>Phone: (941) 448-5656</p>
               </div>
             </div>
           </motion.div>

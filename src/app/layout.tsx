@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: 'Off The Dock Charters',
     images: [
       {
-        url: 'https://offthedockcharters.com/images/Two_guys_Redfish_gallery.png',
+        url: 'https://offthedockcharters.com/images/TwoMenRedfish.jpeg',
         width: 1200,
         height: 630,
         alt: 'Successful fishing charter with Off The Dock Charters in Bradenton, Florida',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     site: '@offthedockcharters',
     title: 'Off The Dock Charters | Premium Fishing Charters in Bradenton, FL',
     description: 'Premier inshore fishing charters in Bradenton & Anna Maria Island with Captain Chandler Brown. Book your adventure today!',
-    images: ['https://offthedockcharters.com/images/Two_guys_Redfish_gallery.png'],
+    images: ['https://offthedockcharters.com/images/TwoMenRedfish.jpeg'],
   },
   robots: {
     index: true,

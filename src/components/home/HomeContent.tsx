@@ -99,9 +99,9 @@ export default function HomeContent() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { image: '/images/Guy_Snook_gallery.png', species: 'Snook', location: 'Sarasota Bay', date: 'April 2025' },
-              { image: '/images/LAdy_large_jack_gallery.png', species: 'Jack Crevalle', location: 'Tampa Bay', date: 'March 2025' },
-              { image: '/images/Two_guys_big_tarpon_gallery.png', species: 'Tarpon', location: 'Manatee River', date: 'February 2025' }
+              { image: '/images/chandler_tarpon.jpeg', species: 'Tarpon', location: 'Manatee River', date: 'Recent Charter' },
+              { image: '/images/ManWithRedfish1.jpeg', species: 'Redfish', location: 'Tampa Bay', date: 'Recent Charter' },
+              { image: '/images/TwoMenRedfish.jpeg', species: 'Redfish', location: 'Sarasota Bay', date: 'Recent Charter' }
             ].map((catch_, index) => (
               <motion.div
                 key={index}
@@ -133,6 +133,65 @@ export default function HomeContent() {
               className="inline-block px-6 py-3 border border-yellow-600 text-yellow-500 rounded-lg hover:bg-yellow-600/10 hover:text-yellow-400 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-900/20"
             >
               View Full Gallery
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* More Amazing Catches Section */}
+      <section className="py-16 px-4 md:px-8 bg-gradient-to-b from-gray-900 to-black">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-[0_2px_4px_rgba(213,150,51,0.3)]">
+              More Amazing Catches
+            </h2>
+            <p className="text-gray-300 max-w-3xl mx-auto">
+              Every charter is different, and every catch tells a story. Check out more of our clients' success!
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { image: '/images/two-reeling-nice-catch.png', title: 'Double Hookup!', description: 'Two anglers fighting fish at the same time' },
+              { image: '/images/chan_nice_redfish.jpeg', title: 'Captain\'s Catch', description: 'Captain Chandler with a beautiful redfish' },
+              { image: '/images/client_nice_red3.jpeg', title: 'Trophy Redfish', description: 'Another satisfied client with their catch' },
+              { image: '/images/ManWithRedfish4.png', title: 'Perfect Day', description: 'Making memories on the water' }
+            ].map((catch_, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative group"
+              >
+                <div className="relative h-64 overflow-hidden rounded-xl shadow-lg bg-black/70 border border-yellow-600/20 hover:border-yellow-500/50 transition-all duration-300">
+                  <Image
+                    src={catch_.image}
+                    alt={catch_.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                    <h3 className="text-lg font-bold text-yellow-400 mb-1">{catch_.title}</h3>
+                    <p className="text-sm text-gray-300">{catch_.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-10">
+            <Link
+              href="/gallery"
+              className="inline-block px-6 py-3 border border-yellow-600 text-yellow-500 rounded-lg hover:bg-yellow-600/10 hover:text-yellow-400 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-900/20"
+            >
+              See All Catches in Gallery
             </Link>
           </div>
         </div>

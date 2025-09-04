@@ -44,7 +44,6 @@ export default function PrivacyPolicyPage() {
                 <li>Book a charter or request information</li>
                 <li>Sign up for our newsletter</li>
                 <li>Contact us through our website</li>
-                <li>Purchase a gift certificate</li>
               </ul>
               <p className="text-gray-300 mt-4">
                 This information may include your name, email address, phone number, mailing address, and payment information.
@@ -108,8 +107,8 @@ export default function PrivacyPolicyPage() {
               <div className="mt-4 text-gray-300">
                 <p>Off The Dock Charters</p>
                 <p>Bradenton, Florida</p>
-                <p>Email: info@offthedockcharters.com</p>
-                <p>Phone: (941) 564-5504</p>
+                <p>Email: reelfly11@gmail.com</p>
+                <p>Phone: (941) 448-5656</p>
               </div>
             </div>
           </motion.div>

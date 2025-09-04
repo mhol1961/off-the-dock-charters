@@ -18,23 +18,45 @@ export const generateCharterServiceSchema = () => {
     offers: [
       {
         '@type': 'Offer',
-        name: 'Half Day Trip',
-        description: '4-hour inshore fishing trip',
+        name: '4 Hour Trip',
+        description: '4-hour inshore fishing trip (1-4 people)',
         availability: 'https://schema.org/InStock',
         priceSpecification: {
           '@type': 'PriceSpecification',
-          price: '400.00',
+          price: '600.00',
           priceCurrency: 'USD'
         }
       },
       {
         '@type': 'Offer',
-        name: 'Full Day Trip',
-        description: '8-hour inshore fishing trip',
+        name: '6 Hour Trip',
+        description: '6-hour inshore fishing trip (1-4 people)',
         availability: 'https://schema.org/InStock',
         priceSpecification: {
           '@type': 'PriceSpecification',
-          price: '700.00',
+          price: '800.00',
+          priceCurrency: 'USD'
+        }
+      },
+      {
+        '@type': 'Offer',
+        name: '8 Hour Trip',
+        description: '8-hour inshore fishing trip (1-4 people)',
+        availability: 'https://schema.org/InStock',
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          price: '1000.00',
+          priceCurrency: 'USD'
+        }
+      },
+      {
+        '@type': 'Offer',
+        name: 'Sunset Cruise',
+        description: '2-hour sunset cruise',
+        availability: 'https://schema.org/InStock',
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          price: '200.00',
           priceCurrency: 'USD'
         }
       }
@@ -50,7 +72,7 @@ export const generateLocalBusinessSchema = () => {
     image: '/images/Logo_OTD_Charters.png',
     '@id': 'https://offthedockcharters.com',
     url: 'https://offthedockcharters.com',
-    telephone: '+1-941-564-5504',
+    telephone: '+1-941-448-5656',
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',

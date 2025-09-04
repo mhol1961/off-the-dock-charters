@@ -13,86 +13,14 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
-    src: '/images/Boy_Tarpon_Gallery.png',
-    alt: 'Young angler with a trophy tarpon catch',
+    src: '/images/chandler_tarpon.jpeg',
+    alt: 'Captain Chandler with a massive tarpon',
     width: 800,
     height: 600
   },
   {
-    src: '/images/Family_catch_trout_gallery.png',
-    alt: 'Family celebrating their trout catch',
-    width: 800,
-    height: 600
-  },
-  {
-    src: '/images/Father_sons_Sheephead.png',
-    alt: 'Father and sons with a sheepshead catch',
-    width: 800,
-    height: 600
-  },
-  {
-    src: '/images/Girl_Permit_gallery.png',
-    alt: 'Young girl with a permit catch',
-    width: 800,
-    height: 600
-  },
-  {
-    src: '/images/Guy_Cobia_gallery.png',
-    alt: 'Angler with a trophy cobia',
-    width: 800,
-    height: 600
-  },
-  {
-    src: '/images/Guy_Snook_gallery.png',
-    alt: 'Angler with a large snook',
-    width: 800,
-    height: 600
-  },
-  {
-    src: '/images/Guy_bent_rod_gallery.png',
-    alt: 'Exciting moment fighting a fish',
-    width: 800,
-    height: 600
-  },
-  {
-    src: '/images/Guy_cobia2_gallery.png',
-    alt: 'Another great cobia catch',
-    width: 800,
-    height: 600
-  },
-  {
-    src: '/images/Guy_shark_gallery.png',
-    alt: 'Angler with a shark catch',
-    width: 800,
-    height: 600
-  },
-  {
-    src: '/images/Lady_Snook_gallery.png',
-    alt: 'Lady angler with a beautiful snook',
-    width: 800,
-    height: 600
-  },
-  {
-    src: '/images/LAdy_large_jack_gallery.png',
-    alt: 'Lady angler with a large jack',
-    width: 800,
-    height: 600
-  },
-  {
-    src: '/images/Man_LArge_mangrove_snapper_gallery.png',
-    alt: 'Angler with a trophy mangrove snapper',
-    width: 800,
-    height: 600
-  },
-  {
-    src: '/images/Teenager_with_Trout_gallery.png',
-    alt: 'Teenager with a nice trout catch',
-    width: 800,
-    height: 600
-  },
-  {
-    src: '/images/man-with-redfish-may2025.jpeg',
-    alt: 'Angler with a beautiful redfish catch',
+    src: '/images/ManWithRedfish1.jpeg',
+    alt: 'Successful redfish catch',
     width: 800,
     height: 600
   },
@@ -103,14 +31,20 @@ const galleryImages: GalleryImage[] = [
     height: 600
   },
   {
-    src: '/images/two-reeling-nice-catch.png',
-    alt: 'Angler with a beautiful copper redfish',
+    src: '/images/ManWithRedfish3.jpeg',
+    alt: 'Another great redfish catch',
     width: 800,
     height: 600
   },
   {
     src: '/images/ManWithRedfish4.jpeg',
     alt: 'Angler showing off a large redfish catch',
+    width: 800,
+    height: 600
+  },
+  {
+    src: '/images/two-reeling-nice-catch.png',
+    alt: 'Anglers reeling in their catch',
     width: 800,
     height: 600
   },
@@ -133,29 +67,35 @@ const galleryImages: GalleryImage[] = [
     height: 600
   },
   {
-    src: '/images/Two_guys_Redfish_gallery.png',
-    alt: 'Two anglers with a redfish catch',
+    src: '/images/chan_nice_redfish.jpeg',
+    alt: 'Captain Chandler with another beautiful redfish',
     width: 800,
     height: 600
   },
   {
-    src: '/images/Two_guys_big_tarpon_gallery.png',
-    alt: 'Two anglers with a massive tarpon',
+    src: '/images/client_with_redfish.jpeg',
+    alt: 'Client with a stunning redfish catch',
     width: 800,
     height: 600
   },
   {
-    src: '/images/Young_Girl_TRout_gallery.png',
-    alt: 'Young girl with her trout catch',
+    src: '/images/client_nice_red.jpeg',
+    alt: 'Happy client with redfish',
     width: 800,
     height: 600
   },
   {
-    src: '/images/Young_boy_redfish_gallery.png',
-    alt: 'Young boy with a redfish catch',
+    src: '/images/client_nice_red2.jpeg',
+    alt: 'Another successful client catch',
     width: 800,
     height: 600
-  }
+  },
+  {
+    src: '/images/client_nice_red3.jpeg',
+    alt: 'Great redfish catch with Captain Chandler',
+    width: 800,
+    height: 600
+  },
 ]
 
 export default function GalleryGrid() {

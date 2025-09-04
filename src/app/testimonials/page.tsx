@@ -46,7 +46,7 @@ export default function TestimonialsPage() {
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="relative w-40 h-40 flex-shrink-0">
                   <Image
-                    src="/images/Guy_Snook_gallery.png"
+                    src="/images/ManWithRedfish4.jpeg"
                     alt="Featured testimonial"
                     fill
                     className="rounded-full object-cover border-4 border-yellow-600/50 shadow-xl"

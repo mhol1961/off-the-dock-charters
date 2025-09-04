@@ -20,9 +20,9 @@ const blogPosts = [
     slug: 'manatee-river-fishing-guide',
     title: 'Manatee River Fishing: Hidden Gem for Snook, Redfish & Tarpon',
     excerpt: 'Discover why the Manatee River is one of our favorite spots for targeting trophy fish in Bradenton waters.',
-    image: '/images/Guy_Snook_gallery.png',
-    date: 'Coming Soon',
-    readTime: '6 min read',
+    image: '/images/ManWithRedfish3.jpeg',
+    date: 'May 30, 2025',
+    readTime: '10 min read',
     tags: ['Manatee River', 'Snook', 'Redfish', 'Tarpon']
   },
   {

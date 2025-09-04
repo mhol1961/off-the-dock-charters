@@ -12,29 +12,46 @@ export default function MarinaInfo() {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="text-4xl font-bold text-white mb-8">Where the Fishing Trips Start</h2>
+          <h2 className="text-4xl font-bold text-white mb-8">Convenient Pickup Locations</h2>
           <div className="prose prose-lg prose-invert space-y-8">
             <p>
-              <a 
-                href="https://www.google.com/maps/@27.5172007,-82.6228962,13.25z?entry=ttu&g_ep=EgoyMDI1MDMyMy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-yellow-400 hover:text-yellow-300 transition-colors"
-              >
-                Blenker Boatworks & Marina
-              </a>{' '}
-              is conveniently located at the mouth of the beautiful Manatee River at channel markers 7 & 8. 
-              It is within walking distance of the historical DeSoto National Memorial Park. They offer a 
-              full service marina featuring: Boca Bait Company, with a large assortment of fishing tackle, 
-              live bait, beer, soda & snacks. They sell recreational ethanol free fuel. On-site boat & 
-              yacht sales, engine repairs, fishing charters, and do it yourself boat repairs. The marina 
-              has 42 wet slips that can accommodate up to a 51' vessel, and plenty of dry storage area. 
-              They have a 35 ton Travel Lift that can accommodate up to a 17' beam.
+              We offer pickup from multiple convenient boat ramps throughout the Bradenton and Anna Maria Island area. 
+              Choose the location that works best for you when booking your charter.
             </p>
+            
+            <div className="grid md:grid-cols-2 gap-6 not-prose">
+              <div className="bg-black/50 p-4 rounded-lg border border-yellow-600/30">
+                <h3 className="text-xl font-bold text-yellow-400 mb-2">Kingfish Ramp</h3>
+                <p className="text-gray-300">752 Manatee Avenue, Holmes Beach, FL 34217</p>
+              </div>
+              
+              <div className="bg-black/50 p-4 rounded-lg border border-yellow-600/30">
+                <h3 className="text-xl font-bold text-yellow-400 mb-2">Warners Bayou</h3>
+                <p className="text-gray-300">5800 Riverview Blvd, Bradenton, FL 34209</p>
+              </div>
+              
+              <div className="bg-black/50 p-4 rounded-lg border border-yellow-600/30">
+                <h3 className="text-xl font-bold text-yellow-400 mb-2">Florida Public Ramp</h3>
+                <p className="text-gray-300">6001 Marina Dr, Holmes Beach, FL 34217</p>
+              </div>
+              
+              <div className="bg-black/50 p-4 rounded-lg border border-yellow-600/30">
+                <h3 className="text-xl font-bold text-yellow-400 mb-2">Riverside</h3>
+                <p className="text-gray-300">805 Riverside Dr, Palmetto, FL 34221</p>
+              </div>
+              
+              <div className="bg-black/50 p-4 rounded-lg border border-yellow-600/30 md:col-span-2">
+                <h3 className="text-xl font-bold text-yellow-400 mb-2">Coquina Bayside</h3>
+                <p className="text-gray-300">1507 Gulf Dr S, Bradenton Beach, FL 34217</p>
+              </div>
+            </div>
+            
             <p>
+              All locations provide easy access to our prime inshore fishing waters. Simply let us know your preferred pickup location when booking, and we'll coordinate the details with you.
             </p>
+            
             <p>
-              The Marina is just a short drive or boat ride to the beautiful white sandy beaches that 
+              Each location is conveniently located near the beautiful white sandy beaches that 
               Manatee County has to offer. Anna Maria Island, Holmes Beach, Bradenton Beach, Longboat 
               Key, St Armand's Circle, & Siesta Key Beach are all wonderful places to explore and see 
               why so many people love the west coast of Florida!

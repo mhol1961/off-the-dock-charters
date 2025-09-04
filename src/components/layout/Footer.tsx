@@ -39,11 +39,11 @@ export default function Footer() {
             <h3 className="text-xl font-bold text-[#D59633] mb-4">Book Your Charter</h3>
             <div className="flex items-center mb-3">
               <FaPhone className="text-[#D59633] mr-3" />
-              <a href="tel:+19415645504" className="text-white hover:text-[#D59633] transition-colors">(941) 564-5504</a>
+              <a href="tel:+19414485656" className="text-white hover:text-[#D59633] transition-colors">(941) 448-5656</a>
             </div>
             <div className="flex items-center">
               <FaEnvelope className="text-[#D59633] mr-3" />
-              <a href="mailto:info@offthedockcharters.com" className="text-white hover:text-[#D59633] transition-colors">info@offthedockcharters.com</a>
+              <a href="mailto:reelfly11@gmail.com" className="text-white hover:text-[#D59633] transition-colors">reelfly11@gmail.com</a>
             </div>
             <div className="mt-4">
               <Link 
@@ -127,11 +127,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/gift" className="text-gray-300 hover:text-[#D59633] transition-colors flex items-center">
-                  <span className="mr-2">›</span> Gift Certificates
-                </Link>
-              </li>
-              <li>
                 <Link href="/contact" className="text-gray-300 hover:text-[#D59633] transition-colors flex items-center">
                   <span className="mr-2">›</span> Book a Charter
                 </Link>
@@ -144,29 +139,21 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-4 text-[#D59633]">Location</h4>
             <div className="text-gray-300 mb-4 flex items-start">
               <FaMapMarkerAlt className="text-[#D59633] mr-2 mt-1 flex-shrink-0" />
-              <span>Marsh Harbor Marina<br />4103 13th Street Ct W, Palmetto, FL 34221</span>
+              <div>
+                <div className="font-medium text-white mb-1">Service Area</div>
+                <span>Bradenton • Anna Maria Island<br />Holmes Beach • Palmetto • Bradenton Beach</span>
+              </div>
             </div>
-            <div className="rounded-lg overflow-hidden h-32 relative border border-gray-700 backlit-shadow">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.4023331092476!2d-82.5662553!3d27.5889498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c3400c0b2a8a6d%3A0x4e0f9c1e9a7c7d3a!2sMarsh%20Harbor%20Marina!5e0!3m2!1sen!2sus!4v1714073591830!5m2!1sen!2sus" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen={false} 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Marsh Harbor Marina Map"
-                className="opacity-80"
-              ></iframe>
-              <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
-              <a 
-                href="https://www.google.com/maps/place/Marsh+Harbor+Marina/@27.5889498,-82.5662553,17z/" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-black/70 text-white hover:text-[#D59633] px-3 py-1 rounded text-sm transition-colors border border-gray-700 hover:border-[#D59633]/50 z-10"
+            <div className="bg-black/30 p-4 rounded-lg border border-gray-700 backlit-shadow">
+              <h4 className="text-[#D59633] font-medium mb-2">Multiple Pickup Locations</h4>
+              <p className="text-gray-300 text-sm mb-3">We offer convenient pickup from 5 boat ramps throughout the area.</p>
+              <Link 
+                href="/about#locations"
+                className="inline-flex items-center text-[#D59633] hover:text-[#c08629] text-sm transition-colors"
               >
-                View Full Map
-              </a>
+                <FaMapMarkerAlt className="mr-1" />
+                View All Locations
+              </Link>
             </div>
           </div>
         </div>

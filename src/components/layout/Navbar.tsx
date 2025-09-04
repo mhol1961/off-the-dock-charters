@@ -36,7 +36,6 @@ const navLinks: NavLink[] = [
     ] 
   },
   { href: '/blog', label: 'Blog' },
-  { href: '/gift', label: 'Gift Certificates' },
   { href: '/faq', label: 'FAQs' },
   { href: '/contact', label: 'Contact' },
 ]
