@@ -5,13 +5,16 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const pricingData = [
-  { people: 1, hours4: 550, hours6: 750, hours8: 900 },
-  { people: 2, hours4: 550, hours6: 750, hours8: 900 },
-  { people: 3, hours4: 600, hours6: 800, hours8: 950 },
-  { people: 4, hours4: 650, hours6: 850, hours8: 1000 },
-  { people: 5, hours4: 700, hours6: 900, hours8: 1050 },
-  { people: 6, hours4: 750, hours6: 950, hours8: 1100 },
+  { people: '1-4', hours4: 600, hours6: 800, hours8: 1000 },
+  { people: '5', hours4: 650, hours6: 850, hours8: 1050 },
+  { people: '6', hours4: 700, hours6: 900, hours8: 1100 },
 ]
+
+const sunsetCruise = {
+  duration: '2 hours',
+  price: 200,
+  description: 'Enjoy a relaxing sunset cruise on the beautiful waters of Tampa Bay'
+}
 
 export default function PackagesPage() {
   return (
@@ -71,7 +74,7 @@ export default function PackagesPage() {
                 >
                   <td className="px-3 py-2 text-sm">
                     <span className="font-semibold">{row.people}</span>{' '}
-                    {row.people === 1 ? 'Person' : 'People'}
+                    {row.people === '1-4' ? 'People' : row.people === '5' ? 'People' : 'People (max)'}
                   </td>
                   <td className="px-3 py-2 text-center text-sm">${row.hours4}</td>
                   <td className="px-3 py-2 text-center text-sm">${row.hours6}</td>
@@ -83,6 +86,23 @@ export default function PackagesPage() {
         </motion.div>
       </div>
 
+      {/* Sunset Cruise Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="mt-12 max-w-4xl mx-auto"
+      >
+        <div className="bg-gradient-to-r from-orange-900/20 to-yellow-900/20 p-8 rounded-lg border border-yellow-600/30">
+          <h2 className="text-3xl font-heading font-bold mb-4 text-[#D59633] text-center">Sunset Cruise Special</h2>
+          <div className="text-center space-y-4">
+            <p className="text-2xl font-bold text-white">${sunsetCruise.price}</p>
+            <p className="text-lg text-gray-300">{sunsetCruise.duration}</p>
+            <p className="text-gray-400 max-w-2xl mx-auto">{sunsetCruise.description}</p>
+          </div>
+        </div>
+      </motion.div>
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -90,13 +110,19 @@ export default function PackagesPage() {
         className="mt-8 space-y-6 max-w-6xl mx-auto"
       >
         <div className="bg-background-light p-6 rounded-lg">
-          <h2 className="text-2xl font-heading font-bold mb-4 text-[#D59633]">Booking Information</h2>
+          <h2 className="text-2xl font-heading font-bold mb-4 text-[#D59633]">Pricing Information</h2>
           <ul className="space-y-4 text-gray-300">
             <li className="flex items-start">
               <svg className="w-6 h-6 text-[#D59633] mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span>$50 deposit required to secure your booking</span>
+              <span className="font-semibold">Additional $50 per person after 4 people (maximum 6 people total)</span>
+            </li>
+            <li className="flex items-start">
+              <svg className="w-6 h-6 text-[#D59633] mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>$150 deposit required to secure your booking (credit card only)</span>
             </li>
             <li className="flex items-start">
               <svg className="w-6 h-6 text-[#D59633] mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
